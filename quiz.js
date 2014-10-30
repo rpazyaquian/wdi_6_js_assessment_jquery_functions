@@ -3,7 +3,9 @@
 // Question 1
 // Use jQuery to add two more elements to the the UL in the 'question-1' div
 
-$('ul').append('<li>Bats</li><li>Snakes</li>');
+$(document).ready(function(){
+  $('ul').append('<li>Bats</li><li>Snakes</li>');
+});
 
 // Question 2
 // Add a click event handler to the paragraph in the 'question-2' div
