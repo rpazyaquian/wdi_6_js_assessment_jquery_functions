@@ -4,7 +4,7 @@
 // Use jQuery to add two more elements to the the UL in the 'question-1' div
 
 $(document).ready(function(){
-  $('ul').append('<li>Bats</li><li>Snakes</li>');
+  $('#question-1 > ul').append('<li>Bats</li><li>Snakes</li>');
 });
 
 // Question 2
@@ -12,9 +12,15 @@ $(document).ready(function(){
 // which triggers a method called 'alertClicked',
 // which will display an alert with the text of "Question 2 Success".
 
-var alertClicked = function() {
-
+var alertClicked = function(message) {
+  alert(message)
 };
+
+$(document).ready(function () {
+  $('#question-2 > p').click(function(){
+    alertClicked("Question 2 Success");
+  });
+});
 
 // Question 3
 // Why won't the following code make clicking on anything the 'question-3' div
