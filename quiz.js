@@ -28,6 +28,12 @@ $(document).ready(function () {
 
 $('#question-3').on('click', alertClicked);
 
+// Answer:
+
+// Since this file is being included before the DOM is built,
+// the element with id "question-3" does not actually exist
+// when we assign this event handler.
+
 // Question 4
 // Make the HTML in the 'question-4' div fade out when you hover over it,
 // and fade back in when you move your mouse away from it
