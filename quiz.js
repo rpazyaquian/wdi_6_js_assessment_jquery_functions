@@ -38,6 +38,26 @@ $('#question-3').on('click', alertClicked);
 // Make the HTML in the 'question-4' div fade out when you hover over it,
 // and fade back in when you move your mouse away from it
 
+$(document).ready(function(){
+
+  // thanks, sublime, for having a hover() macro!
+
+  $('#question-4').hover(function() {
+    /* Stuff to do when the mouse enters the element */
+    // on mouse entering the element, fade out slowly
+    $(this).fadeOut('slow');
+  }, function() {
+    /* Stuff to do when the mouse leaves the element */
+    // on mouse leaving the element, fade in slowly
+    $(this).fadeIn('slow');
+  });
+
+  // ...except that it still has some weird behavior.
+  // i'm not sure why that's happening, but the code
+  // is correct, as far as i can tell.
+
+});
+
 // Question 5
 // Make question 5's h2 turn blue when someone types 'winning'
 // in its input element and hits enter
