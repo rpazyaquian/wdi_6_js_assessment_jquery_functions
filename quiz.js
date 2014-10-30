@@ -152,6 +152,8 @@ var prices = items.map(function(item) {
   return item.price;
 });
 
-var totalPrice = prices.reduce(function(price) {
-  return
+var totalPrice = prices.reduce(function callbackfn(previousValue, currentValue, currentIndex, array1) {
+  return previousValue + currentValue;
 });
+
+console.log(totalPrice);
