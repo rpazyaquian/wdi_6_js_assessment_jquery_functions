@@ -3,9 +3,11 @@
 // Question 1
 // Use jQuery to add two more elements to the the UL in the 'question-1' div
 
+$('ul').append('<li>Bats</li><li>Snakes</li>');
+
 // Question 2
 // Add a click event handler to the paragraph in the 'question-2' div
-// which triggers a method called 'alertClicked', 
+// which triggers a method called 'alertClicked',
 // which will display an alert with the text of "Question 2 Success".
 
 var alertClicked = function() {
@@ -13,7 +15,7 @@ var alertClicked = function() {
 };
 
 // Question 3
-// Why won't the following code make clicking on anything the 'question-3' div 
+// Why won't the following code make clicking on anything the 'question-3' div
 // invoke the alertClicked method?
 
 $('#question-3').on('click', alertClicked);
@@ -23,7 +25,7 @@ $('#question-3').on('click', alertClicked);
 // and fade back in when you move your mouse away from it
 
 // Question 5
-// Make question 5's h2 turn blue when someone types 'winning' 
+// Make question 5's h2 turn blue when someone types 'winning'
 // in its input element and hits enter
 
 // Question 6
