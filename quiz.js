@@ -107,18 +107,39 @@ $(document).ready(function(){
 // Write a method called 'highLightHeaders' that will add a class of 'highlight'
 // to all h2's when it is invoked
 
+var highLightHeaders = function() {
+  // the `highlight` style doesn't seem to exist in style.css, though.
+  $('h2').addClass('highlight');
+}
+
 // Question 8
 // Define a constructor function called `Cat`,that accepts a `name`,
 // an `age`, and a `color`, and stores these values as properties.
+
+var Cat = function(name, age, color) {
+  this.name = name;
+  this.age = age;
+  this.color = color;
+}
+
+var jet = new Cat('Jet', 5, 'black');
 
 // Question 9
 // Add a function called `description` to the `Cat` prototype that returns a string
 // describing the cat in this format: "<name> is a <age>-year-old <color> cat."
 
+Cat.prototype.description = function() {
+  return this.name+" is a "+this.age+"-year-old "+this.color+" cat.";
+}
+
+console.log(jet.description());
+
 // Question 10
 // Use the methods of .map and .reduce to return the
 // sum the prices of the objects in the array below.
 // Do *not* use a for loop
+
+// looked up map and reduce for this.
 
 var items = [
   {name: 'iPhone 5c', price: 99.99},
@@ -126,3 +147,11 @@ var items = [
   {name: 'iPhone 6', price: 249.99},
   {name: 'iPhone 6 plus', price: 399.99}
 ];
+
+var prices = items.map(function(item) {
+  return item.price;
+});
+
+var totalPrice = prices.reduce(function(price) {
+  return
+});
